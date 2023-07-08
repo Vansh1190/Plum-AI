@@ -34,7 +34,10 @@ const Ask = (message) => {
       // required, alternating prompt/response messages
       messages,
     },
-  }).then((result) => result[0].candidates).catch(() => 'error try again with correct credentials. \nor contact developer.');
+   }).then((result) => result[0].candidates).catch((err) => {
+    console.log(err);
+    return 'error';
+  });
 };
 
 module.exports = Ask;
