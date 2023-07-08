@@ -10,6 +10,7 @@ const Ask = (message) => {
   const client = new DiscussServiceClient({
     authClient: new GoogleAuth().fromAPIKey(API_KEY),
   });
+  console.log(message)
   const { context } = message;
   const messages = [];
 
